@@ -29,6 +29,10 @@ double sum(int arr[], int arrLength);
 double standardDeviation(int arr[], int arrLength);
 double mean(int arr[], int arrLength);
 double variance(int arr[], int arrLength);
+bool equal(const char str1[], const char str2[]);
+bool isPalindrome(const char str[]);
+void hasDuplicates(const char str[]);
+
 /**
  * @brief Read a double from standard input.
  * 

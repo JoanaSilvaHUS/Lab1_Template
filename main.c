@@ -6,10 +6,8 @@
 #include "strings.h"
 
 #define LENGTH 5
-int main() {
-
-
-   
+int main() 
+{   
     int v[LENGTH] = {2,3,6,4,7};
 
     printArray(v, LENGTH);
@@ -22,13 +20,12 @@ int main() {
     char str1[20];
     char str2[20];
 
+    printf("Digite uma frase: ");
     scanf("%s", str1);
+    printf("Digite outra frase: ");
     scanf("%s", str2);
-    if (equal(str1, str2))
-    {
-        printf("São iguais\n");
-    }
-    else printf("São diferentes\n");
+    hasDuplicates(str1);
+    hasDuplicates(str2);
 
 
 

@@ -17,7 +17,7 @@ bool equal(const char str1[], const char str2[])
 bool isPalindrome(const char str[])
 {
     int i = 0;
-    int j = size(str)-1;
+    int j = strlen(str);
     while (i<j){
         if (tolower(str[i]) != tolower(str[j])) return false;
         i++;
@@ -25,3 +25,28 @@ bool isPalindrome(const char str[])
     }
     return true;
 }   
+
+void hasDuplicates(const char str[]){ //nao tá a funcionar 100% corretamente
+    int i, j, len, v = 1;
+
+    len = strlen(str);
+
+    printf("\nCaracteres duplicados da frase %s: ", str);
+    for (i = 0; i < len; i++) {
+        for (j = i + 1; j < len; j++) {
+            if (str[i] == str[j]) {
+                if (v == 1 && str[j] != '\0') {
+                    printf("%c  ", str[i]);
+                }
+                
+                v++;
+            }
+        }
+        v = 1;
+    }
+}
+
+void letterFrequency(const char str[])
+{
+
+}
