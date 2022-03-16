@@ -2,12 +2,15 @@
 #include <stdlib.h>
 #include "input.h"
 #include "arrays.h"
-
+#define LENGTH 5
 int main() {
    
-    int v[5] = {2,3,6,4,7};
+    int v[LENGTH] = {2,3,6,4,7};
 
-    printArray(v, 5);
+    printArray(v, LENGTH);
 
-    return EXIT_SUCCESS;
+    printf("Soma: %d\n", sum(v, LENGTH));
+    printf("Média: %.02f\n", mean(v, LENGTH));
+
+    return 0;
 }
