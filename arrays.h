@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "math.h"
 
 void printArray(int arr[], int arrLength){
     printf("[ ");
@@ -14,9 +15,9 @@ void printArray(int arr[], int arrLength){
     
 }
 
-int sum(int arr[], int arrLength)
+double sum(int arr[], int arrLength)
 {
-    int sum = 0.0; 
+    double sum = 0.0; 
 
     for (int i = 0; i<arrLength; i++)
     {
@@ -33,5 +34,16 @@ double mean(int arr[], int arrLength)
 
 double variance(int arr[], int arrLength)
 {
-    
+    double meanA = mean(arr, arrLength);
+    double sumSqDIff = 0;
+    for(int i = 0; i < arrLength; i++)
+    {
+        sumSqDIff += pow(arr[i]-meanA,2);
+    }
+
+    return sumSqDIff/(arrLength-1);
+}
+
+double standardDeviation(int arr[], int arrLength){
+    return sqrt(variance(arr, arrLength));
 }
