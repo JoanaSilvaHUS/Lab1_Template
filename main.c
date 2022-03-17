@@ -24,9 +24,13 @@ int main()
     scanf("%s", str1);
     printf("Digite outra frase: ");
     scanf("%s", str2);
+    equal(str1, str2);
+    isPalindrome(str1);
+    isPalindrome(str2);
     hasDuplicates(str1);
     hasDuplicates(str2);
-
+    letterFrequency(str1);
+    letterFrequency(str2);
 
 
     return 0;

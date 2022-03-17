@@ -26,27 +26,37 @@ bool isPalindrome(const char str[])
     return true;
 }   
 
-void hasDuplicates(const char str[]){ //nao tá a funcionar 100% corretamente
-    int i, j, len, v = 1;
-
-    len = strlen(str);
-
-    printf("\nCaracteres duplicados da frase %s: ", str);
-    for (i = 0; i < len; i++) {
-        for (j = i + 1; j < len; j++) {
-            if (str[i] == str[j]) {
-                if (v == 1 && str[j] != '\0') {
-                    printf("%c  ", str[i]);
-                }
-                
-                v++;
+bool hasDuplicates(const char str[]){ //nao tá a funcionar 100% corretamente
+    
+    for(int i = 0; i <strlen(str) - 1; i++){
+        for (int j = 1; j < strlen(str); j++ )
+        {
+            if (str[i] == str[j] && i != j)
+            {
+                return true;
             }
         }
-        v = 1;
     }
+    return false;
 }
 
 void letterFrequency(const char str[])
 {
+    char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
+    int counter=0;
 
+    printf("Letra\t| Freq: \n");
+    for(int i = 0; i < strlen(alphabet); i++)
+    {
+        for(int j = 0; j < strlen(str); j++)
+        {
+            if (alphabet[i] == str[j]){
+                counter++;
+            }
+        }
+    printf("%c\t| %d\n", alphabet[i], counter);
+    counter = 0;
+    }
+
+    
 }
